@@ -1,29 +1,38 @@
-"use client";
+// components/Navbar.js
+"use client"; // Asegúrate de marcar este componente como un Client Component
+
 import { useState } from 'react';
 import Link from 'next/link';
+import styles from './menu.module.scss'; // Importa los estilos SCSS modulares
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsOpen(false);
   };
 
   return (
-    <nav className="navbar">
-      <div className="dropdown">
-        <button onClick={toggleDropdown} className="dropdown-button">
-          Menú
-        </button>
+    <nav className={styles.navbar}>
+      <div
+        className={styles.dropdown}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className={styles.dropdownButton}>Campus</button>
         {isOpen && (
-          <ul className="dropdown-menu">
-            <li className="dropdown-item">
+          <ul className={styles.dropdownMenu}>
+            <li className={styles.dropdownItem}>
               <Link href="/">Inicio</Link>
             </li>
-            <li className="dropdown-item">
-              <Link href="/about">Acerca de</Link>
+            <li className={styles.dropdownItem}>
+              <Link href="/nosotros">Nosotros</Link>
             </li>
-            <li className="dropdown-item">
+            <li className={styles.dropdownItem}>
               <Link href="/contact">Contacto</Link>
             </li>
           </ul>

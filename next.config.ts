@@ -11,13 +11,18 @@ module.exports = {
         source: '/about',
         destination: '/pages/about',
       },
-      {
-        source: '/contact',
-        destination: '/pages/contact',
-      },
+      //CAMPUS      
       {
         source: '/sms-y-plan-de-emergencia',
         destination: '/pages/campus/SMS_y_plan_emergencia',
+      },
+      {
+        source: '/nosotros',
+        destination: '/pages/nosotros',
+      },
+      {
+        source: '/contacto',
+        destination: '/pages/contacto',
       },
     ];
   },
