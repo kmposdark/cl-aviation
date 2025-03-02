@@ -2,12 +2,12 @@
 
 import React from 'react';
 
-const About = () => {
+const CampusEnglish = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
+      <h1>CampusEnglish</h1>
     </div>
   );
 };
 
-export default About;
+export default CampusEnglish;
